@@ -37,3 +37,5 @@ bot.onText(/\/balance/, (msg) => {
 });
 
 console.log("KAREX Mining bot çalışıyor 🔥");
+import http from "http";
+http.createServer((req, res) => res.end("KAREX bot çalışıyor")).listen(process.env.PORT || 8080);
