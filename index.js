@@ -13,7 +13,7 @@ console.log("KAREX Mining bot çalışıyor 🔥");
 bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
 
-  const webAppUrl = "https://karex-mining-bot-1.onrender.com"; // BURAYA KENDİ WEBAPP LINKIN GELECEK
+  const webAppUrl = "https://karexwebapp-1.onrender.com"; // BURAYA KENDİ WEBAPP LINKIN GELECEK
 
   bot.sendMessage(
     chatId,
