@@ -1,0 +1,61 @@
+:root{
+  --bg:#0f0f11;
+  --card:#121214;
+  --accent:#f7931a;
+  --muted:#9aa0a6;
+  --glass: rgba(255,255,255,0.03);
+  --radius:16px;
+  --text:#efefef;
+  --shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:linear-gradient(180deg,#070708 0%, #0f0f11 100%);font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;color:var(--text)}
+.app{max-width:980px;margin:0 auto;min-height:100vh;display:flex;flex-direction:column;padding:18px}
+
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:var(--shadow);backdrop-filter: blur(6px);}
+.brand{display:flex;gap:12px;align-items:center}
+.brand .logo{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(90deg,#0b0b0d,#0f0f11)}
+.name{font-weight:700;font-size:18px}
+.sub{font-size:12px;color:var(--muted)}
+
+.balance-pill{display:flex;align-items:center;gap:10px;background:linear-gradient(90deg, rgba(255,121,0,0.12), rgba(255,121,0,0.06));padding:8px 12px;border-radius:999px}
+.bal-label{font-size:10px;color:var(--muted);text-transform:uppercase}
+.bal-value{font-weight:800;font-size:20px;color:var(--accent)}
+.bal-symbol{font-size:11px;color:var(--muted)}
+
+.main{display:grid;grid-template-columns:1fr;gap:16px;margin-top:16px}
+
+.card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid rgba(255,255,255,0.02)}
+
+.mining-card{display:flex;flex-direction:column;align-items:center;gap:14px;padding:28px}
+.mining-ring{position:relative;display:flex;align-items:center;justify-content:center}
+.tap-btn{width:200px;height:200px;border-radius:999px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#1a1a1a,#0d0d0d);color:var(--accent);font-weight:800;font-size:20px;box-shadow:0 8px 30px rgba(247,147,26,0.12);cursor:pointer;border:6px solid rgba(247,147,26,0.08);position:relative;z-index:2}
+.ring-anim{position:absolute;width:320px;height:320px;border-radius:999px;border:2px dashed rgba(247,147,26,0.06);filter:blur(8px);animation:spin 10s linear infinite}
+
+@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+
+.mining-info .large{font-weight:700;font-size:18px;color:var(--text)}
+.small{color:var(--muted);font-size:13px}
+
+.grid{display:grid;grid-template-columns:1fr 360px;gap:16px}
+.features .boost-list{display:flex;flex-direction:column;gap:10px}
+.boost{background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);color:var(--text);cursor:pointer;font-weight:700}
+.tasks ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.btn{background:var(--accent);color:#111;padding:10px 12px;border-radius:10px;border:none;cursor:pointer;margin-top:10px;font-weight:800}
+.small{padding:8px 10px;font-size:13px}
+.wallet-row{display:flex;gap:8px}
+.wallet-row input{flex:1;padding:10px;border-radius:8px;background:var(--glass);border:1px solid rgba(255,255,255,0.02);color:var(--text)}
+.ref-row{display:flex;align-items:center;gap:12px;margin-top:12px}
+.ref-code{background:linear-gradient(90deg,#0e0e10,#121214);padding:8px 12px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+
+.history-list{list-style:none;padding:0;margin:0;max-height:120px;overflow:auto}
+.history-list li{padding:8px;border-radius:8px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);margin-bottom:8px;font-size:13px;color:var(--muted)}
+
+.footer{margin-top:auto;display:flex;justify-content:space-between;align-items:center;padding:12px 8px;color:var(--muted)}
+.ghost{background:transparent;border:1px solid rgba(255,255,255,0.03);padding:8px;border-radius:10px;color:var(--muted);cursor:pointer}
+
+@media (max-width:900px){
+  .grid{grid-template-columns:1fr; }
+  .tap-btn{width:160px;height:160px}
+             }
